@@ -1,120 +1,125 @@
-# AI-Based-Smart-Road-Network-Planning
-An AI-driven GIS application for optimal road network planning using Python, OpenStreetMap, Cartosat DEM and WorldPop datasets.
+# AI-Based Smart Road Network Planning Using Satellite Imagery
 
-## Overview
+A Python-based Geographic Information System (GIS) application that leverages Artificial Intelligence to recommend optimal road routes using satellite imagery, terrain elevation, population density, and OpenStreetMap road network data.
 
-This project presents an AI-assisted approach to smart road network planning using satellite imagery, terrain elevation, population density, and real-world road network data. The application analyzes geographical constraints and recommends an optimal route between selected locations.
-
-The project integrates Geographic Information Systems (GIS) with Artificial Intelligence techniques to support efficient transportation planning and infrastructure development.
+This project demonstrates how AI and geospatial analytics can assist in planning efficient road networks by considering geographical constraints and population distribution.
 
 ---
 
-## Features
+## Project Highlights
 
-- Interactive GUI developed using Tkinter
-- Real-world road network using OpenStreetMap (OSM)
+- AI-assisted road route planning
+- Real-world OpenStreetMap integration
 - Terrain analysis using Cartosat DEM
-- Population density analysis using WorldPop data
-- AI-assisted optimal route planning
-- Route visualization on map
-- Real-time source and destination selection
-
----
-
-## Tech Stack
-
-**Programming Language**
-- Python
-
-**Libraries Used**
-- OSMnx
-- GeoPandas
-- NetworkX
-- Rasterio
-- NumPy
-- Matplotlib
-- Tkinter
-- Pillow
-- Geopy
-
-**Datasets**
-- Cartosat DEM
-- WorldPop Population Density
-- OpenStreetMap
+- Population density analysis using WorldPop
+- Interactive graphical interface using Tkinter
+- Route visualization and comparison
+- GIS-based spatial analysis
 
 ---
 
 ## Repository Structure
 
 ```
-AI-Based-Smart-Road-Network-Planning/
+AI-Based-Smart-Road-Network-Planning
 │
 ├── Delhi_DEM.zip
 ├── ind_pd_2020_1km.tif
 ├── Project_RealWorldMap_RealData_Test.py
+├── requirements.txt
 └── README.md
 ```
 
 ---
 
-# Important
+# Technologies Used
 
-## Step 1: Extract the DEM File
+### Programming Language
 
-Before running the project, **extract `Delhi_DEM.zip`** in the project directory.
+- Python
 
-After extraction, the folder should contain the DEM file required by the application.
+### Libraries
 
-Example:
+- OSMnx
+- GeoPandas
+- NetworkX
+- Rasterio
+- NumPy
+- Matplotlib
+- Pillow
+- Geopy
+- Pandas
+- Tkinter
 
-```
-Delhi_DEM.zip
-        ↓ Extract
+### GIS Datasets
 
-delhi_cartosat_dem_merged.tif
-```
-
-Do **not** rename the extracted file unless you also update its filename in the Python source code.
+- Cartosat DEM
+- WorldPop Population Density
+- OpenStreetMap
 
 ---
 
-## Installation
+# Installation
 
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AI-Based-Smart-Road-Network-Planning.git
+git clone https://github.com/GHBAbhishek/AI-Based-Smart-Road-Network-Planning.git
 ```
 
-Move to the project folder
+Move into the project directory
 
 ```bash
 cd AI-Based-Smart-Road-Network-Planning
 ```
 
-Install the required libraries
+Install the required packages
 
 ```bash
-pip install osmnx geopandas rasterio networkx matplotlib pillow geopy numpy
+pip install -r requirements.txt
 ```
 
 ---
 
-## Required Files
+# Before Running the Project
 
-Ensure the following files are present before execution:
+## Step 1 — Extract the DEM File
+
+The terrain dataset has been compressed to reduce repository size.
+
+Extract
 
 ```
-Project_RealWorldMap_RealData_Test.py
-delhi_cartosat_dem_merged.tif      (Extract from Delhi_DEM.zip)
-ind_pd_2020_1km.tif
+Delhi_DEM.zip
 ```
+
+After extraction, you should obtain
+
+```
+delhi_cartosat_dem_merged.tif
+```
+
+Place the extracted file in the project root directory alongside the Python file.
+
+Your directory should now look like:
+
+```
+AI-Based-Smart-Road-Network-Planning
+│
+├── delhi_cartosat_dem_merged.tif
+├── ind_pd_2020_1km.tif
+├── Project_RealWorldMap_RealData_Test.py
+├── requirements.txt
+└── README.md
+```
+
+> **Important:** Do not rename the extracted DEM file unless you also update its filename in the Python source code.
 
 ---
 
-## Running the Project
+# Running the Project
 
-Execute the Python file:
+Run the application using:
 
 ```bash
 python Project_RealWorldMap_RealData_Test.py
@@ -122,50 +127,108 @@ python Project_RealWorldMap_RealData_Test.py
 
 ---
 
-## Workflow
+# Project Workflow
 
-1. Extract the DEM dataset.
+1. Extract the Cartosat DEM dataset.
 2. Launch the application.
-3. Load the Delhi road network.
-4. Select source and destination.
+3. Load the Delhi road network from OpenStreetMap.
+4. Select the source and destination.
 5. The application analyzes:
-   - Terrain elevation
-   - Population density
-   - Existing road network
-6. The optimal route is generated and displayed.
+   - Terrain Elevation
+   - Population Density
+   - Existing Road Network
+6. AI-based pathfinding computes the optimal route.
+7. The generated route is displayed on the interactive map.
 
 ---
 
-## Applications
+# Datasets Used
+
+## 1. Cartosat DEM
+
+Purpose:
+
+- Terrain elevation analysis
+- Slope estimation
+- Road feasibility assessment
+
+---
+
+## 2. WorldPop Population Dataset
+
+Purpose:
+
+- Population density analysis
+- Demand estimation
+- Route prioritization
+
+---
+
+## 3. OpenStreetMap
+
+Purpose:
+
+- Real-world road network
+- Geographic visualization
+- Route generation
+
+---
+
+# Applications
 
 - Smart City Planning
-- Road Infrastructure Development
-- Transportation Planning
+- Transportation Engineering
+- Highway Planning
 - Disaster Management
-- GIS-Based Decision Support
-- AI-Assisted Route Optimization
+- Urban Infrastructure Development
+- GIS Research
+- AI-Based Navigation Systems
 
 ---
 
-## Future Scope
+# Future Improvements
 
-- Deep Learning-based road extraction
-- Live traffic integration
-- Weather-aware routing
-- Multi-city support
-- Reinforcement Learning-based adaptive routing
-- Web deployment using Flask
+- Live Traffic Integration
+- Weather-aware Route Planning
+- Multi-city Support
+- Satellite Image-based Road Detection
+- Deep Learning-based Terrain Classification
+- Reinforcement Learning for Adaptive Routing
+- Flask Web Deployment
 
 ---
 
-## Author
+---
+
+# Author
 
 **Abhishek Sharma**
 
 B.Tech Computer Science & Engineering
 
+
 ---
 
-## License
+# License
 
-This project is intended for educational and research purposes only.
+This project is developed for academic, educational, and research purposes only.
+
+---
+
+## Citation
+
+If you use this project in your research or academic work, please provide appropriate attribution.
+
+```
+@software{GeoRouteAI,
+  author = {Abhishek Sharma},
+  title = {AI-Based Smart Road Network Planning Using Satellite Imagery},
+  year = {2026}
+}
+```
+
+---
+
+## Contact
+
+For suggestions or collaboration, feel free to connect through GitHub.
